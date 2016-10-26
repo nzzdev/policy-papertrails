@@ -1,0 +1,22 @@
+<template>
+  <require from="./elements/affair-card.js"></require>
+  <form submit.delegate="search()">
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="input-group">
+          <span class="input-group-label">Search (Elasticsearch Query)</span>
+          <input value.bind="query" class="input-group-field" type="text">
+          <div class="input-group-button">
+            <input type="submit" class="button" value="Submit">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" repeat.for="year of yearsSpanned">
+    <h2 class="year">${year}</h2>
+    <div repeat.for="hit of hitsByYear[year]">
+      <affair-card affair.bind="hit._source"></affair-card>
+    </div>
+  </div>
+</template>

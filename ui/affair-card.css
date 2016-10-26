@@ -1,0 +1,17 @@
+
+.affair-card {
+  width: 33.333%;
+  background: lightgray;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.affair-card--importance-2 {
+  position: relative;
+  left: 33.333%;
+}
+
+.affair-card--importance-3 {  
+  position: relative;
+  left: 66.6666%;
+}

@@ -1,0 +1,11 @@
+<template class="affair-card">
+    <div class="affair-card-person">
+      <div if.bind="affair.author && affair.author.councillor" class="affair-card-partycircle party-${affair.author.faction.code}">
+        <img class="affair-card-portrait"
+             src="https://www.parlament.ch/sitecollectionimages/profil/portrait-260/${affair.author.councillor.code}.jpg">
+      </div>
+    </div>
+    <div class="affair-card-affair">
+      ${affair.affairType.name}: ${affair.id}
+    </div>
+</template>

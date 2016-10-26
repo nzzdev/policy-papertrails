@@ -1,0 +1,45 @@
+.affair-card {
+  display: block;
+  width: 33.333%;
+  background: lightgray;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.affair-card::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.affair-card--importance-2 {
+  position: relative;
+  left: 33.333%;
+}
+
+.affair-card--importance-3 {  
+  position: relative;
+  left: 66.6666%;
+}
+
+.affair-card-person {
+  width: 30%;
+  float: left;
+}
+
+.affair-card-affair {
+  width: 70%;
+  float: left;
+}
+
+
+.affair-card-portrait {
+  width: 100%;
+  display: block;
+}
+
+.affair-card-partycircle {
+  border-radius: 50%;
+  width: 40%;
+  border: 5px solid red;
+}
