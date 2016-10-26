@@ -1,6 +1,6 @@
 # Policy Papertrails
 
-The NZZ Storytelling EditorsLab project. Work in progress, powered by neurons, code and Bavarian beer. 
+The NZZ Storytelling [EditorsLab](http://www.globaleditorsnetwork.org/programmes/editors-lab/sz-editors-lab/) project. Work in progress, powered by neurons, code and Bavarian beer. 
 
 ## The problem
 * Too little reporting on policy making is done in a structured, data-informed way, but based on agenda setting, current events and anecdotal evidence. 
