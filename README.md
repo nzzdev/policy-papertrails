@@ -17,4 +17,4 @@ The NZZ Storytelling [EditorsLab](http://www.globaleditorsnetwork.org/programmes
 * ████████████████████████
 * ████████████████████████████████████████
 
-Not going to share those for now. ¯\_(ツ)_/¯
+Not going to share those for now. ¯\\ _(ツ) _/¯
