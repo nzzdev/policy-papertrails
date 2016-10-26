@@ -1,0 +1,21 @@
+{
+  "name": "policy-explorer-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Beni Buess <beni.buess@nzz.ch>",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "boom": "^4.2.0",
+    "elasticsearch": "^11.0.1",
+    "hapi": "^15.2.0",
+    "hapi-cors-headers": "^1.0.0",
+    "hapi-heroku-helpers": "^2.0.0",
+    "inert": "^4.0.2",
+    "joi": "^9.2.0"
+  }
+}

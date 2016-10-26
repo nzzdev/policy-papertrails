@@ -1,0 +1,5 @@
+---
+applications:
+- name:    policy-papertrails-api
+  memory:  256M
+  health-check-type: none
