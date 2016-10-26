@@ -12,8 +12,9 @@ The NZZ Storytelling [EditorsLab](http://www.globaleditorsnetwork.org/programmes
 * It allows you to see patterns and outliers that make for stories of public interest. 
 
 ## Example queries / stories
-* ████████████████████████████████████████████████████████ 
+* ███████████████████████████████████████████ 
 * ████████████████████████████████
-* ████████████████████████████████████████████████
+* ████████████████████████
 * ████████████████████████████████████████
+
 Not going to share those for now. ¯\_(ツ)_/¯
