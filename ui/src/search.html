@@ -15,16 +15,18 @@
     </div>
   </form>
   <div class="row">
-    <ul class="menu">
-      <li>Suggested Queries:</li>
-      <li><a href="#" click.trigger="executeSuggestedQuery('Burka')">Burka</a></li>
-      <li><a href="#" click.trigger="executeSuggestedQuery('Nachrichtendienst')">Nachrichtendienst</a></li>
-      <li><a href="#" click.trigger="executeSuggestedQuery('AHV')">AHV</a></li>
-      <li><a href="#" click.trigger="executeSuggestedQuery('Kinderkrippe')">Kinderkrippe</a></li>
-      <li><a href="#" click.trigger="executeSuggestedQuery('Frauenquote')">Frauenquote</a></li>
-      <li><a href="#" click.trigger="executeSuggestedQuery('Arbeitslose')">Arbeitslose</a></li>
-      <li><a href="#" click.trigger="executeSuggestedQuery('NZZ')">NZZ</a></li>
-    </ul>
+    <div class="menu-centered">
+      <ul class="menu">
+        <li>Suggested Queries:</li>
+        <li><a href="#" click.trigger="executeSuggestedQuery('Burka')">Burka</a></li>
+        <li><a href="#" click.trigger="executeSuggestedQuery('Nachrichtendienst')">Nachrichtendienst</a></li>
+        <li><a href="#" click.trigger="executeSuggestedQuery('AHV')">AHV</a></li>
+        <li><a href="#" click.trigger="executeSuggestedQuery('Kinderkrippe')">Kinderkrippe</a></li>
+        <li><a href="#" click.trigger="executeSuggestedQuery('Frauenquote')">Frauenquote</a></li>
+        <li><a href="#" click.trigger="executeSuggestedQuery('Arbeitslose')">Arbeitslose</a></li>
+        <li><a href="#" click.trigger="executeSuggestedQuery('NZZ')">NZZ</a></li>
+      </ul>
+    </div>
   </div>
   <div class="row">
     <timeline affairs.bind="hits"></timeline>

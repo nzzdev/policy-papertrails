@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 body, h1, h2, h3, h4, h5, h6 {
   font-family: Roboto, sans-serif;
 }
@@ -5,7 +9,7 @@ body, h1, h2, h3, h4, h5, h6 {
 h1 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .year {
@@ -39,12 +43,17 @@ h1 {
   text-align: center;
 }
 
+bundeshaus-image svg {
+  display: block;
+  width: 100%;
+}
+
 storytelling-logo svg {
   display: block;
   background: white;
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 5px;
+  right: 5px;
 }
