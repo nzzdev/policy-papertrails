@@ -4,3 +4,10 @@
   position: relative;
   border-bottom: 1px solid darkgray;
 }
+
+.page-content {
+  display: block;
+  width: 95vw;
+  margin: 0 auto;
+  position: relative;
+}

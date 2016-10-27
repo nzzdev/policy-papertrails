@@ -1,9 +1,8 @@
 .affair-card {
   display: block;
   width: 33.333%;
-  background: lightgray;
+  background: #EEEEEE;
   padding: 10px;
-  margin: 0 10px;
 }
 
 .affair-card::after {
@@ -24,7 +23,7 @@
 
 .affair-card-person {
   width: 30%;
-  float: left;
+  float: right;
 }
 
 .affair-card-affair {
@@ -32,14 +31,41 @@
   float: left;
 }
 
+.affair-card-date {
+}
+
+.affair-card-type {
+  font-weight: bold;
+}
+
+.affair-card-fraction {
+  text-align: right;
+}
 
 .affair-card-portrait {
   width: 100%;
   display: block;
+  -webkit-clip-path: circle(50% at center);
 }
 
 .affair-card-partycircle {
   border-radius: 50%;
-  width: 40%;
+  width: 60%;
   border: 5px solid red;
+}
+
+.affair-card-partycircle--party-S {
+  border-color: #b31200;
+}
+
+.affair-card-partycircle--party-C {
+  border-color: #bb7b00;
+}
+
+.affair-card-partycircle--party-V { /* SVP */
+  border-color: #00a0a6;
+}
+
+.affair-card-partycircle--party-G { /* GPS */
+  border-color: #5b981a;
 }

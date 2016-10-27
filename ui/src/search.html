@@ -1,10 +1,11 @@
 <template>
   <require from="./elements/affair-card.js"></require>
+  <require from="./elements/timeline.js"></require>
   <form submit.delegate="search()">
     <div class="row">
       <div class="small-12 columns">
         <div class="input-group">
-          <span class="input-group-label">Search (Elasticsearch Query)</span>
+          <span class="input-group-label">Search</span>
           <input value.bind="query" class="input-group-field" type="text">
           <div class="input-group-button">
             <input type="submit" class="button" value="Submit">
@@ -12,10 +13,13 @@
         </div>
       </div>
     </div>
+  </form>
+  <div class="row">
+    <timeline affairs.bind="hits"></timeline>
   </div>
   <div class="row" repeat.for="year of yearsSpanned">
     <h2 class="year">${year}</h2>
-    <div repeat.for="hit of hitsByYear[year]">
+    <div repeat.for="hit of hitsByYear[year]" style="margin-bottom: 10px;">
       <affair-card affair.bind="hit._source"></affair-card>
     </div>
   </div>

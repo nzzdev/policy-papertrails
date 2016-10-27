@@ -20,6 +20,7 @@ export class Search {
           })
       })
       .then(hits => {
+        this.hits = hits;
         let hitsByYear = {};
         hits
           .map(hit => {
@@ -30,7 +31,6 @@ export class Search {
             hitsByYear[depositDate.getFullYear()].push(hit)
           })
         this.yearsSpanned = Object.keys(hitsByYear)
-        console.log(this.yearsSpanned, hitsByYear)
         this.hitsByYear = hitsByYear;
       })
   }

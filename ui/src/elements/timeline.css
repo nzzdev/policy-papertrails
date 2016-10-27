@@ -1,0 +1,36 @@
+.timeline {
+  display: block;
+  position: relative;
+  height: 100px;
+  width: calc(100% - 20px);
+}
+
+.timeline::before {
+  content: '';
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  background: #CCCCCC;
+}
+
+.timeline-circle {
+  position: absolute;
+  background: rgba(195,25,6,0.3);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  position: absolute;
+  top: 20px;
+}
+
+.timeline-date--first {
+
+}
+
+.timeline-date--last {
+  right: -20px;
+}

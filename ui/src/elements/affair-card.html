@@ -1,11 +1,16 @@
 <template class="affair-card">
+    <require from="../resources/DateValueConverter.js"></require>
+    <div class="affair-card-affair">
+      <div class="affair-card-date">${affair.deposit.date | date}</div>
+      <div class="affair-card-type">${affair.affairType.name}</div>
+      <a target="_blank" href="https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=${affair.id}">${affair.id}</a>
+    </div>
     <div class="affair-card-person">
-      <div if.bind="affair.author && affair.author.councillor" class="affair-card-partycircle party-${affair.author.faction.code}">
+      <div class="affair-card-fraction">${affair.author.faction.code}</div>
+      <div if.bind="affair.author && affair.author.councillor" class="affair-card-partycircle affair-card-partycircle--party-${affair.author.faction.code}">
         <img class="affair-card-portrait"
              src="https://www.parlament.ch/sitecollectionimages/profil/portrait-260/${affair.author.councillor.code}.jpg">
       </div>
-    </div>
-    <div class="affair-card-affair">
-      ${affair.affairType.name}: ${affair.id}
+      ${affair.author.councillor.name}
     </div>
 </template>
