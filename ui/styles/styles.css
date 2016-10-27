@@ -1,3 +1,7 @@
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+}
+
 h1 {
   text-align: center;
   margin-bottom: 30px;
@@ -19,22 +23,28 @@ h1 {
 }
 
 .relevance {
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
 }
 
 .relevance h3 {
   font-size: small;
-  font-weight: normal;
+  font-weight: bold;
+  text-align: center;
 }
 
-.relevance-arrow svg {
-  display: block;
-  width: 100%;
-}
-
-.relevance-labels div {
+.relevance-labels h3, .relevance-labels div {
   width: 33.3333%;
   float: left;
   font-size: smaller;
   text-align: center;
+}
+
+storytelling-logo svg {
+  display: block;
+  background: white;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

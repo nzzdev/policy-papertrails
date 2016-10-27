@@ -29,6 +29,11 @@ export class Search {
     this.hitsByYear = {}
     this.yearsSpanned = []
   }
+
+  executeSuggestedQuery(query) {
+    this.query = query;
+    this.search();
+  }
   
   search() {
     fetch(`https://policy-papertrails-api.eu-gb.mybluemix.net/affairs?q=${this.query}`)

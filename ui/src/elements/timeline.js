@@ -8,13 +8,16 @@ export class Timeline {
   lastDate;
 
   affairsChanged() {
-    let fromDate = new Date(1999,0,1);
+    let fromDate = new Date(1995,0,1);
     this.firstDate = fromDate.getTime();
     this.lastDate = Date.now();
     
     if (this.affairs && this.affairs.length) {
       for (let affair of this.affairs) {
         let date = new Date(affair._source.deposit.date)
+        if (date.getTime() < this.firstDate) {
+          this.firstDate = date.getTime();
+        }
         affair.date = date.getTime();
       }
       this.dateRange = this.lastDate - this.firstDate;
