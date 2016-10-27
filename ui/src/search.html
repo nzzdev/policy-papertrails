@@ -17,6 +17,26 @@
   <div class="row">
     <timeline affairs.bind="hits"></timeline>
   </div>
+  <div class="row">
+    <div class="relevance">
+      <h3>Relevance</h3>
+      <div class="relevance-labels">
+        <div>low</div>
+        <div>middle</div>
+        <div>high</div>
+      </div>
+      <div class="relevance-arrow">
+        <svg viewBox="0 0 756.736 27.335">
+          <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="13.6675" x2="756.7363" y2="13.6675">
+            <stop  offset="0" style="stop-color:#E2938D"/>
+            <stop  offset="0.5589" style="stop-color:#D24E5E"/>
+            <stop  offset="1" style="stop-color:#B41412"/>
+          </linearGradient>
+          <polygon fill="url(#SVGID_1_)" points="725.743,0 725.743,7.667 0,7.667 0,19.667 725.743,19.667 725.743,27.335 756.736,13.667 "/>
+        </svg>
+      </div>
+    </div>
+  </div>
   <div class="row" repeat.for="year of yearsSpanned">
     <h2 class="year">${year}</h2>
     <div repeat.for="hit of hitsByYear[year]" style="margin-bottom: 10px;">

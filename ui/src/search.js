@@ -20,13 +20,22 @@ const affairGroups = {
 export class Search {
 
   attached() {
-    this.query = 'Nachrichtendienst';
+    this.query = 'Burka';
     this.search();
+  }
+
+  init() {
+    this.hits = []
+    this.hitsByYear = {}
+    this.yearsSpanned = []
   }
   
   search() {
     fetch(`https://policy-papertrails-api.eu-gb.mybluemix.net/affairs?q=${this.query}`)
       .then(response => {
+        if (!response.ok) {
+          throw response;
+        }
         return response.json()
       })
       .then(data => {
@@ -62,6 +71,10 @@ export class Search {
           })
         this.yearsSpanned = Object.keys(hitsByYear)
         this.hitsByYear = hitsByYear;
+      })
+      .catch(err => {
+        console.log(err)
+        this.init();
       })
   }
 }

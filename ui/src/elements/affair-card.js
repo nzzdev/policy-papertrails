@@ -5,6 +5,5 @@ export class AffairCard {
   @bindable affair
 
   attached() {
-    console.log(this.affair)
   }
 }

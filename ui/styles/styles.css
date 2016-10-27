@@ -1,3 +1,9 @@
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
 .year {
   text-align: center;
   font-size: 16px;
@@ -10,4 +16,25 @@
   width: 95vw;
   margin: 0 auto;
   position: relative;
+}
+
+.relevance {
+  margin: 0 0 20px 0;
+}
+
+.relevance h3 {
+  font-size: small;
+  font-weight: normal;
+}
+
+.relevance-arrow svg {
+  display: block;
+  width: 100%;
+}
+
+.relevance-labels div {
+  width: 33.3333%;
+  float: left;
+  font-size: smaller;
+  text-align: center;
 }

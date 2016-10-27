@@ -1,8 +1,9 @@
 .affair-card {
   display: block;
   width: 33.333%;
-  background: #EEEEEE;
   padding: 10px;
+
+  overflow-wrap: break-word;
 }
 
 .affair-card::after {
@@ -11,61 +12,80 @@
   clear: both;
 }
 
+.affair-card--group-3 {
+  position: relative;
+  left: 0;
+}
+
 .affair-card--group-2 {
   position: relative;
   left: 33.333%;
 }
 
-.affair-card--group-3 {  
+.affair-card--group-1 {  
   position: relative;
   left: 66.6666%;
 }
 
-.affair-card-person {
-  width: 30%;
-  float: right;
-}
-
-.affair-card-affair {
-  width: 70%;
+.affair-card-author {
+  width: 40%;
   float: left;
 }
 
+.affair-card-affair {
+  margin-top: 20px;
+  padding: 10px;
+  width: 60%;
+  float: left;
+  background: #EEEEEE;
+}
+
 .affair-card-date {
+  margin-bottom: 10px;
 }
 
 .affair-card-type {
   font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.affair-card-title {
+  margin-bottom: 10px;
 }
 
 .affair-card-fraction {
-  text-align: right;
+  text-align: left;
+  font-size: small;
 }
 
 .affair-card-portrait {
   width: 100%;
   display: block;
-  -webkit-clip-path: circle(50% at center);
 }
 
-.affair-card-partycircle {
-  border-radius: 50%;
-  width: 60%;
-  border: 5px solid red;
+.affair-card-partyindicator {
+  width: 80px;
+  height: 80px;
+  border-top: 5px solid red;
+  border-left: 5px solid red;
 }
 
-.affair-card-partycircle--party-S {
+.affair-card-partyindicator--party-S {
   border-color: #b31200;
 }
 
-.affair-card-partycircle--party-C {
+.affair-card-partyindicator--party-C {
   border-color: #bb7b00;
 }
 
-.affair-card-partycircle--party-V { /* SVP */
+.affair-card-partyindicator--party-V { /* SVP */
   border-color: #00a0a6;
 }
 
-.affair-card-partycircle--party-G { /* GPS */
+.affair-card-partyindicator--party-G { /* GPS */
   border-color: #5b981a;
+}
+
+.affair-card-partyindicator--party-RL { /* GPS */
+  border-color: #0076b1;
 }
