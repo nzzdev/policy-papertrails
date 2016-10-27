@@ -31,14 +31,16 @@ var loadAllAffairs = asyncWhile(function(data) {
           data.hasNextPage = affair.hasMorePages;
         }
       }
-// data.hasNextPage = false;
+      if (data.pageNumber >= data.maxPageNr) {
+        data.hasNextPage = false;
+      }
       data.pageNumber++;
       return data;
     })
 });
 
-const getAllAffairs = function() {
-  return loadAllAffairs({pageNumber: 1, hasNextPage: true, affairs: []})
+const getAllAffairs = function(fromPage, toPage) {
+  return loadAllAffairs({pageNumber: fromPage, maxPageNr: toPage, hasNextPage: true, affairs: []})
     .then(function(result) {
       return result.affairs;
     });
@@ -46,14 +48,13 @@ const getAllAffairs = function() {
 
 const getAffairDetail = function(affairId) {
   return fetch(`http://ws-old.parlament.ch/affairs/${affairId}?format=json`, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36" 
-    }
-  })
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36" 
+      }
+    })
     .then(response => {
       return response.json();
     })
-
 }
 
 module.exports = {

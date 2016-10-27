@@ -1,4 +1,6 @@
-const VCAP_SERVICES = JSON.parse(process.env.VCAP_SERVICES);
+// const VCAP_SERVICES = JSON.parse(process.env.VCAP_SERVICES);
+
+const VCAP_SERVICES = require('./vcap.js')
 
 var elasticsearch = require('elasticsearch');
 

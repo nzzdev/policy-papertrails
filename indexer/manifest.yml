@@ -1,4 +1,5 @@
 ---
 applications:
-- name:    parlch-explorer
-  memory:  512M
+- name:    policy-papertrails-indexer
+  memory:  4096M
+  no-route: true
