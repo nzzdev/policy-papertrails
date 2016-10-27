@@ -74,7 +74,16 @@ export class Search {
             }
             hitsByYear[depositDate.getFullYear()].push(hit)
           })
-        this.yearsSpanned = Object.keys(hitsByYear)
+
+        let firstYear = parseInt(Object.keys(hitsByYear).shift())
+        let lastYear = parseInt(Object.keys(hitsByYear).pop())
+
+        let currentYear = firstYear;
+        while (currentYear <= lastYear) {
+          this.yearsSpanned.push(currentYear);
+          currentYear++;
+        }
+
         this.hitsByYear = hitsByYear;
       })
       .catch(err => {

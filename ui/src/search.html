@@ -42,7 +42,7 @@
   </div>
   <div class="row" repeat.for="year of yearsSpanned">
     <h2 class="year">${year}</h2>
-    <div repeat.for="hit of hitsByYear[year]" style="margin-bottom: 10px;">
+    <div if.bind="hitsByYear[year]" repeat.for="hit of hitsByYear[year]" style="margin-bottom: 10px;">
       <affair-card affair.bind="hit._source"></affair-card>
     </div>
   </div>
