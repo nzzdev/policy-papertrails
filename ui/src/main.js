@@ -1,9 +1,10 @@
-import 'bootstrap';
-
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .developmentLogging();
+
+  if (location.host.indexOf('localhost') !== -1) {
+    aurelia.use.developmentLogging();
+  }
 
   //Uncomment the line below to enable animation.
   //aurelia.use.plugin('aurelia-animator-css');

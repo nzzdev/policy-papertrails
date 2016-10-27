@@ -1,4 +1,4 @@
 module.exports = {
-  minPageNr: 751,
-  maxPageNr: 800
+  minPageNr: 401,
+  maxPageNr: 500
 }
