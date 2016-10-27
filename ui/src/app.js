@@ -1,6 +1,6 @@
 export class App {
   configureRouter(config, router) {
-    config.title = 'Aurelia';
+    config.title = 'NZZ Policy Papertrails';
     config.map([
       { route: ['', 'search'], name: 'search',      moduleId: 'search',      nav: true, title: 'Search' },
     ]);

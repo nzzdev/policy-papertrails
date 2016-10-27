@@ -20,6 +20,7 @@ const affairGroups = {
 export class Search {
 
   attached() {
+    this.init();
     this.query = 'Burka';
     this.search();
   }
@@ -36,6 +37,7 @@ export class Search {
   }
   
   search() {
+    this.init();
     fetch(`https://policy-papertrails-api.eu-gb.mybluemix.net/affairs?q=${this.query}`)
       .then(response => {
         if (!response.ok) {
@@ -69,10 +71,11 @@ export class Search {
         hits
           .map(hit => {
             let depositDate = new Date(hit._source.deposit.date)
-            if (!hitsByYear.hasOwnProperty(depositDate.getFullYear())) {
-              hitsByYear[depositDate.getFullYear()] = []
+            let year = parseInt(depositDate.getFullYear())
+            if (!hitsByYear.hasOwnProperty(year)) {
+              hitsByYear[year] = []
             }
-            hitsByYear[depositDate.getFullYear()].push(hit)
+            hitsByYear[year].push(hit)
           })
 
         let firstYear = parseInt(Object.keys(hitsByYear).shift())
