@@ -11,12 +11,12 @@
   clear: both;
 }
 
-.affair-card--importance-2 {
+.affair-card--group-2 {
   position: relative;
   left: 33.333%;
 }
 
-.affair-card--importance-3 {  
+.affair-card--group-3 {  
   position: relative;
   left: 66.6666%;
 }

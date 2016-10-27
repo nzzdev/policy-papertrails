@@ -4,6 +4,6 @@
   <div class="timeline-date timeline-date--last">${lastDate | date}</div>
   <div class="timeline-circle" 
        repeat.for="affair of affairs"
-       style="left: ${(lastDate - affair.date) / (dateRange / 100)}%">
+       style="left: ${100 - ((lastDate - affair.date) / (dateRange / 100))}%">
   </div>
 </template>

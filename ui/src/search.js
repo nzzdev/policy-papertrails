@@ -1,3 +1,22 @@
+const affairGroups = {
+  "Wahlen": "1",
+  "Geschäft des Bundesrates": "1",
+  "Geschäft des Parlaments": "1",
+  "Parlamentarische Initiative": "1",
+  "Motion": "1",
+  "Postulat": "2",
+  "Dringliche Interpellation": "2",
+  "Interpellation": "2",
+  "Anfrage": "3",
+  "Dringliche Anfrage": "3",
+  "Dringliche Einfache Anfrage": "3",
+  "Einfache Anfrage": "3",
+  "Standesinitiative": "3",
+  "Für die Galerie": "3",
+  "Fragestunde. Frage": "3",
+  "Petition": "3"
+}
+
 export class Search {
 
   attached() {
@@ -17,6 +36,17 @@ export class Search {
         return hits
           .sort((a, b) => {
             return (Date.parse(a._source.deposit.date) - Date.parse(b._source.deposit.date))
+          })
+      })
+      .then(hits => {
+        return hits
+          .map(hit => {
+            if (affairGroups.hasOwnProperty(hit._source.affairType.name)) {
+              hit._source.group = affairGroups[hit._source.affairType.name]
+            } else {
+              hit._source.group = 1;
+            }
+            return hit;
           })
       })
       .then(hits => {
